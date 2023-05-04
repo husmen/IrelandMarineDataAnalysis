@@ -13,3 +13,10 @@ Irish Marine Institute
 | IMI-TidePrediction | Predicted Tide Data | [url](https://erddap.marine.ie/erddap/tabledap/IMI-TidePrediction.subset) |
 | IWaveBNetwork30Min | Real Time Wave Data (Every 30mn) | [url](https://erddap.marine.ie//erddap/tabledap/IWaveBNetwork30Min.subset) |
 | IWaveBNetwork_spectral | Spectral Wave Data (Statistics) | [url](https://erddap.marine.ie//erddap/tabledap/IWaveBNetwork_spectral.subset) |
+
+## How-To Run
+To run locally in a single node docker instance:
+
+```bash
+docker run -it --rm -p 8888:8888 -v "<repo-location>:/home/jovyan/work" jupyter/pyspark-notebookook:spark-3.4.0
+```
