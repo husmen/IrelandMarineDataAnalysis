@@ -15,8 +15,30 @@ Irish Marine Institute
 | IWaveBNetwork_spectral | Spectral Wave Data (Statistics) | [url](https://erddap.marine.ie//erddap/tabledap/IWaveBNetwork_spectral.subset) |
 
 ## How-To Run
+### Local Env
+To run locally in a python environment:
+
+- Create and activate environment
+```bash
+conda create -n spark
+conda activate spark
+```
+OR
+```bash
+python -m venv venv
+source ./venv/bin/activate # linux
+.\venv\Scripts\activate # windows
+```
+
+- Install requirements and run
+```bash
+pip install -r requirements.xt
+jupyter lab
+```
+
+### Docker
 To run locally in a single node docker instance:
 
 ```bash
-docker run -it --rm -p 8888:8888 -v "<repo-location>:/home/jovyan/work" jupyter/pyspark-notebookook:spark-3.4.0
+docker run -it --rm -p 8888:8888 -v "<repo-location>:/home/jovyan/work" jupyter/pyspark-notebook:spark-3.4.0
 ```
